@@ -1,0 +1,64 @@
+@startuml NLP_2.x_Arch
+frame 展示层 { 
+  node APP {
+
+  }
+  node API {
+
+  }
+}
+
+frame 核心层 {
+  node DM {
+
+  }
+  node NLU {
+
+  }
+  node NLG {
+
+  }
+}
+
+frame 内容层 {
+  node 技能库 {
+
+  }
+  node 知识问答库 {
+
+  }
+  node 语料库 {
+    
+  }
+  node 第三方语义 {
+
+  } 
+}
+
+frame 原料层 {
+  node 网络 {
+
+  }
+
+  node 用户 {
+
+  }
+
+  node 百科 {
+
+  }
+
+  node 图谱 {
+
+  }
+
+  node 行业 {
+    
+  }
+}
+
+展示层 ~~ 核心层
+核心层 ~~ 内容层
+内容层 ~~ 原料层
+
+@enduml

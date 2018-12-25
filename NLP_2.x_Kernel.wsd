@@ -1,0 +1,30 @@
+@startuml NLP_2.x_kernel
+package "场景模型" {
+
+node "MITIE" {
+    [Distributional\nWord\nEmbeddings]
+    [Structurl SVM]
+  }
+  [Distributional\nWord\nEmbeddings] --> [Structural SVM]
+
+  node "自然语言理解" {
+    [Lucene]
+    [NER]
+    [Word Segment]
+  }
+  [NER] --> [Word Segment]
+  [Word Segment] --> [Lucene]
+
+  node "自然语言生成" {
+    [ES]
+    [Jena]
+    [Knowledge Graph]
+  }
+  [Jena] --> [Knowledge Graph]
+  [ES] --> [Knowledge Graph]
+
+  note left of NLG
+    暂未实现
+  end note
+}
+@enduml

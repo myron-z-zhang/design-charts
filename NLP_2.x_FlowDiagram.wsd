@@ -1,0 +1,18 @@
+@startuml NLP_2.x_FlowDiagram
+start
+:请求文本;
+:场景预测模型;
+if (场景A匹配成功?) then (yes)
+  :获取槽值;
+  :业务处理;
+else (no)
+  :第3方语义;
+  if (是否闲聊类?) then (yes)
+    :情感预测模型;
+  else (no)
+  endif
+endif
+:JSON封装;
+end
+@enduml
+
